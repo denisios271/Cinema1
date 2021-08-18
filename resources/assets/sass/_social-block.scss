@@ -1,0 +1,28 @@
+.social-block {
+    height: 36px;
+    transition: all .3s;
+    cursor: pointer;
+    
+    &:hover {
+        opacity: 0.93;
+    }
+
+    &-icon {
+        float: left;
+        height: 28px;
+    }
+
+    &-text {
+        margin-left: -28px;
+        margin-top: 2px;
+        float: left;
+        width: 100%;
+        font-size: 16px;
+        margin-top: 5px;
+    }
+
+    &-vk {
+        background-color: #4d76a5;
+        color: #fff;
+    }
+}

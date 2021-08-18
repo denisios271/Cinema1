@@ -1,0 +1,3 @@
+export const RECEIVE = 'ARTICLE.RECEIVE';
+export const FETCH = 'ARTICLE.FETCH';
+export const RECEIVE_ERROR = 'ARTICLE.RECEIVE_ERROR';

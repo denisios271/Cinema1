@@ -1,0 +1,2 @@
+export const RECEIVE_POSTS = 'RECEIVE_POSTS';
+export const FETCHING_POSTS = 'FETCHING_POSTS';

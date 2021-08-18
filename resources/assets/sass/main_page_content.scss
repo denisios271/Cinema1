@@ -1,0 +1,90 @@
+
+
+.main-container {
+	display: flex;
+	clear: both;
+	
+	// & .side-bar-left + .content {
+	// 	width: calc(100%/6*4.5);
+	// }
+}
+
+.side-bar-left {
+	width: calc(100%/6);
+	padding: 15px 0px;
+	
+	// &-postPage {
+	// 	width: calc(100%/6*1.5);
+	// }
+}
+
+body {
+	// overflow-x: hidden;
+}
+
+.player__cont {
+	// display: none !important;
+}
+
+.content {
+	padding: 15px 0px;
+	width: calc(100%/6*5);
+	overflow: hidden;
+
+	&-full-size {
+		width: 100%;
+		padding: 0px 3.5%;
+	}
+}
+
+.promote-relize {
+
+}
+
+.relize-image-cont {
+	
+}
+
+
+@include mobile {
+
+	.main-container {
+		flex-wrap: wrap;
+	}
+
+
+	.content {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+
+
+	.side-bar-left {
+		width: 100%;
+		align-items: center; 
+		display: flex;
+		flex-wrap: nowrap;
+	}
+
+	.content {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		padding: 0px;
+
+		&-row {
+			padding: 0px;
+			margin: 15px 0px;
+			&-main-page .slick-arrow {
+				display: none !important;
+			}
+		}
+
+		.relizes-row {
+			margin: 0px;
+		}
+	}
+
+	
+}

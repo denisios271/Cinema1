@@ -1,0 +1,142 @@
+
+
+
+
+
+
+.comments {
+    width: 100%;
+}
+
+.comment {
+    &__overflow {
+        position: relative;
+        padding-left: 70px;
+        min-height: 55px;
+    }
+    
+    &__avatar {
+        position: absolute;
+        left: 15px;
+        width: 40px;
+        height: 40px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+}
+
+
+.add-comment {
+
+    border: 2px solid #e7e7e7;
+    border-radius: 3px;
+    overflow: hidden;
+
+    &__textarea {
+        &-overflow {
+            position: relative;
+        }
+        &-placeholder {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            padding: 5px 10px;
+            font-size: 1.4em;
+            color: #777;
+        }
+
+        position: relative;
+        padding: 5px 10px;
+        color: #444;
+        width: 100%;
+        min-height: 55px;
+        height: 100%;
+        margin: 0;
+        border: 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+        width: 100% !important;
+        border: 1px solid transparent;
+        font-size: 1.4em;
+        transition: .4s;
+        // &:before {
+        //     content: 'Присоединитесь к обсуждению...';
+        //     position: absolute;
+        //     font-size: 1.3em;
+        //     color: #777;
+        // }
+
+    }
+    &__textarea:focus {
+        border: 1px solid #e7e7e7;
+        outline: none;
+        min-height: 70px;
+    }
+
+
+    &__bottom {
+        border-top: 2px solid #e7e7e7;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+    }
+
+    &__button {
+        min-width: 140px;
+        background-color: #5c1d26;
+        color: white;
+        text-align: center;
+        padding: 5px 10px;
+        font-size: 1.2em;
+        border: 1px solid transparent;
+        cursor: pointer;
+        transition: .4s;
+        &.add-comment__button-disable {
+          background-color: white;
+          color: #444;
+          border: 1px solid #b7b7b7;
+          cursor: inherit;
+        }
+        &:hover:not(.add-comment__button-disable) {
+            background-color: #7e1d26
+        }
+    }
+}
+
+
+.commentText {
+    &__data {
+        display: flex;
+    }
+
+    &__author {
+        margin: 5px;
+        color: #555;
+    }
+
+    &__date {
+        margin: 5px;
+        color: #777;
+    }
+
+    &__text {
+        max-width: 100%;
+        padding: 5px 10px;
+        font-size: 1.5em;
+        color: #333;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .comments {
+        padding: 0px 7px;
+    }
+}

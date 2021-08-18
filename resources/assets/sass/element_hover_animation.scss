@@ -1,0 +1,173 @@
+
+$colorForAnimate: white;
+
+/*.hasHoverBottomAnimate {
+	position: relative;
+
+	&:after,&:before {
+		content: '';
+		position: absolute;
+		width: 0%;
+		left: 0px;
+		right: 0px;
+		margin: 0 auto;
+		opacity: 0;
+		transition: all 1s;
+		border-bottom: 2.5px solid $colorForAnimate;
+	}
+
+	&:after {
+		bottom: 0px;
+		margin-bottom: -5px;
+	}
+	&:before {
+		top: 0px;
+		
+	}	
+
+
+	&:hover {
+		&:after {
+			width: 100%;
+			margin-bottom: 0px;
+			opacity: 1;
+			
+		}
+
+		&:before {
+			width: 100%;
+			
+			opacity: 1;
+		}
+	}
+}*/
+
+
+
+
+
+.hasHoverBottomAnimate {
+	position: relative;
+	/*transition: all 1s;*/
+
+	&:after,&:before {
+		content: '';
+		position: absolute;
+		width: 0%;
+		height: 0%;
+		border: 0px solid $colorForAnimate;
+		transition: 1s;
+	}
+
+	&:after {
+		bottom: 0px;
+		right: 0px;
+	}
+	&:before {
+		top: 0px;
+		left: 0px;
+	}	
+
+
+	&:hover {
+		&:after {
+			width: 100%;
+			height: 100%;
+			margin-bottom: 0px;
+			opacity: 1;
+			border-bottom: 1px solid $colorForAnimate;
+			border-right: 1px solid $colorForAnimate;
+			
+		}
+
+		&:before {
+			width: 100%;
+			height: 100%;
+			opacity: 1;
+			border-left: 1px solid $colorForAnimate;
+			border-top: 1px solid $colorForAnimate;
+		}
+	}
+}
+
+
+
+.hasMenuTypeAnimation {
+	transition: 1s;
+	cursor: pointer;
+	&:hover {
+		background-color: #6D1A2A;
+		opacity: .85s;
+	}
+}
+
+
+
+/*hover animation with rotated background-hover for relizes*/
+.relizes-row__relize .relize__image-cont,
+.promote-relize .promote-relize__image-cont,
+.relize-soon__cont .relize__image-cont {
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+
+	&:before {
+		content: '';
+		transition: .45s;
+		transform: rotate(45deg);
+		position: absolute;
+		z-index: 1;
+
+		top: -50%;
+		left: -50%;
+
+		opacity: .25;
+		background-color: #6D1A2A;
+
+		width: 0px;
+		height: 0px;
+	}
+
+}
+
+.relizes-row__relize:hover .relize__image-cont:before  {
+	width: 200%;
+	height: 200%;
+}
+
+
+.promote-relize:hover .promote-relize__image-cont:before {
+	top: -100%;
+	left: -100%;
+}
+
+
+.promote-relize:hover .promote-relize__image-cont:before {
+	width: 300%;
+	height: 300%;
+}
+
+.relize-soon__cont:hover .relize__image-cont:before {
+	top: -100%;
+	left: -100%;
+}
+
+.relize-soon__cont:hover .relize__image-cont:before {
+	width: 300%;
+	height: 300%;
+}
+
+
+
+.promote-relize {
+	&__header {
+		transition: 1s;
+		border: 1px solid transparent;
+	}
+
+	&:hover {
+		.promote-relize__header {
+			border: 1px solid white;
+		}
+	}
+}

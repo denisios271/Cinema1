@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://firedub.net/sitemap.xml

@@ -1,0 +1,35 @@
+
+
+.user-tabs {
+    padding-bottom: 6px;
+}
+
+
+.type-button__href {
+
+    &-user {
+
+        &:before {
+            content: '';
+        }
+
+        &:after {
+            border-color: #ff0028;
+        }
+
+    }
+
+}
+
+
+
+.user_info {
+    padding: 5px;
+
+    &__header {
+        display: inline-block;
+        padding: 5px;
+        font-size: 1.5em;
+        color: #444;
+    }
+}

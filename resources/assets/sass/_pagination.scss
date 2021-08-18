@@ -1,0 +1,45 @@
+.pagination {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: -2rem;
+    padding-left: 0;
+    list-style: none;
+
+    .page-item {
+        $color: #673439;
+        display: list-item;
+        
+        .page-link {
+            position: relative;
+            display: block;
+            padding: .5rem .75rem;
+            margin-left: -1px;
+            line-height: 1.25;
+            color: #007bff;
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+
+            &:hover {
+                background-color: #eee;
+            }
+        }
+
+        &.active {
+            .page-link {
+                z-index: 1;
+                color: #fff;
+                background-color: $color;
+                border-color: $color;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .pagination {
+        margin-bottom: inherit;
+    }
+}

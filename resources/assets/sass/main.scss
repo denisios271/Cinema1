@@ -1,0 +1,143 @@
+$main_bg_picture: url(/images/template/texture_main_menu.png);
+
+* {
+	box-sizing: border-box;
+}
+
+
+body {
+	font-size: 16px;
+    font-family: "Kurale";
+    font-style: normal;
+    font-weight: normal;
+}
+
+@media screen and (max-width: 1600px){
+	body {
+		font-size: 11px;
+	}
+}
+
+@media screen and (max-width: 1024px){
+	body {
+		font-size: 10px;
+	}
+}
+
+
+.relize-sizes {
+	width: 100%;
+	/*описывает формат-соотношение ширины к высоте картинки, которое по заверением будет использоваться во всех постерах*/
+	// width = 278; height = 417;
+	// 417 / 278 = 1.5;
+	padding-top: calc(100% * 1.5);
+	position: relative;
+	overflow: hidden;
+
+	/*если картинка будет другого соотношения, по ширине она будет растягиватся а по высоте центрироваться, обрезаясь по краям*/
+	&__image{
+		max-width: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+    	bottom: 0;
+    	margin: auto 0;
+
+	}
+}
+
+
+.banner-2x3 {
+
+	&__max-size {
+		/*max-width: 280px;*/
+		max-width: 85%;
+		margin: 0 auto;
+		margin-right: 15%;
+		position: relative;
+	}
+
+	&__image-cont {
+		width: 100%;
+		/*описывает формат-соотношение 2x3*/
+		padding-top: calc(100% * 1.5);
+		position: relative;
+		overflow: hidden;
+	}
+
+	&__image {
+		max-width: 100%;
+		position: absolute;
+
+		top: 0;
+    	bottom: 0;
+    	margin: auto 0;
+	}
+}
+
+.has_bg {
+	background-image: $main_bg_picture;
+}
+
+.button_styled {
+	background-image: $main_bg_picture;
+    outline: none;
+    border: 2px solid #79333e;
+    color: white;
+    font-family: "Kurale";
+    padding: 5px 15px;
+	border-radius: 3px;
+	transition: .4s;
+	cursor: pointer;
+}
+
+.button_styled:hover {
+	border: 2px solid white;
+}
+
+
+.styled_header {
+	margin: 5px 0px;
+	padding: 5px 0px;
+	text-align: center;
+	font-size: 1.4em;
+	background-image: url(/images/template/texture_main_menu.png);
+	outline: none;
+	border: 2px solid #79333e;
+	color: white;
+}
+
+.clear_both {
+	clear: both;
+}
+
+
+// add slickly footer for height of inner < window height
+
+html,body {
+	min-height: 100%;
+	height: 100%;
+}
+
+#app {
+	height: 100%;
+}
+
+
+.wrapper {
+	display: flex;
+    flex-direction: column;
+	min-height: 100%;
+
+	& .header {
+		flex: 0 0;
+	}
+
+	& .main-container {
+		flex: 1 0;
+	}
+
+	& .footer {
+		flex: 0 0;
+	}
+}

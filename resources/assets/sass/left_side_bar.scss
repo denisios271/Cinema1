@@ -1,0 +1,114 @@
+.side-bar-left {
+    margin-left: 30px;
+    
+	&__promote-relize{
+		padding: 15px 0px;
+	}
+
+	&__banner-2x3 {
+		margin: 15px 0;
+	}
+}
+
+.promote-relize {
+	&__max-size {
+		/*max-width: 280px;*/
+		max-width: 85%;
+		margin: 0 auto;
+		margin-right: 15%;
+		position: relative;
+	}
+
+	&__header-new:after {
+		content: 'Новинка';
+	}
+
+	&__header-reccomend:after {
+		content: 'Рекомендуем';
+	}
+
+	&__header {
+	    position: absolute;
+	    bottom: 10%;
+	    left: 25%;
+	    width: 90%;
+	    background-color: #7e0003;
+	    padding: 1.25%;
+	    font-size: 2em;
+	    color: #fff;
+	    text-align: center;
+	    border-radius: 4px;
+	    z-index: 1;
+
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+}
+
+
+@media (max-width: 1200px) {
+	.promote-relize {
+		&__header {
+			font-size: 1.3em;
+		}
+	}
+}
+
+
+@media (max-width: 900px) {
+	.promote-relize {
+		&__header {
+			font-size: 1.07em;
+			padding-top: 4px;
+			padding-bottom: 4px;
+		}
+	}
+}
+
+
+
+@media (max-width: 768px) {
+
+	.side-bar-left {
+		margin-left: auto;
+		// display: flex;
+		flex-wrap: wrap;
+		padding: 0 3.75%;
+		
+		&__promote-relize:first-child {
+			order: 1;
+		}
+
+		&__banner-2x3 {
+			order: 2;
+		}
+
+		&__promote-relize:first-child {
+			order: 3;
+		}
+
+		.promote-relize__header {
+			font-size: 1em;
+			&-new {
+				left: auto;
+				right: 17%;
+			}
+
+			&-reccomend {
+				left: 17%;
+			}
+		}
+
+		.promote-relize__max-size,
+		.banner-2x3__max-size {
+			margin-right: auto;
+		}
+
+	}
+
+	.side-bar-left > div {
+        width: calc(100%/3);
+	}
+
+
+}

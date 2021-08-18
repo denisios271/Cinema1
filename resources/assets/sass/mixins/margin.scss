@@ -1,0 +1,26 @@
+.m {
+    $margin: 15px;
+
+    @mixin addMarginToSides($localMargin, $sides) {
+        @each $side in $sides {
+            #{$side}: $localMargin;
+        }
+    }
+
+    @mixin addSidesWithMargin($sides...) {
+        @include addMarginToSides($margin, $sides);
+        &-1 { @include addMarginToSides($margin / 3, $sides) }
+        &-2 { @include addMarginToSides($margin / 2, $sides) }
+        &-3 { @include addMarginToSides($margin, $sides) }
+        &-4 { @include addMarginToSides($margin * 2, $sides) }
+        &-5 { @include addMarginToSides($margin * 3, $sides) }
+    }
+
+    @include addSidesWithMargin(margin);
+    &-x { @include addSidesWithMargin(margin-left, margin-right) }
+    &-y { @include addSidesWithMargin(margin-top, margin-bottom) }
+    &-left { @include addSidesWithMargin(margin-left) }
+    &-right { @include addSidesWithMargin(margin-right) }
+    &-top { @include addSidesWithMargin(margin-top) }
+    &-bottom { @include addSidesWithMargin(margin-bottom) }
+}

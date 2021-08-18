@@ -1,0 +1,12 @@
+.bj {
+    color: #eee;
+    height: 100%;
+
+    @import "__game-wrapper";
+    @import "__topbar";
+    @import "__card";
+    @import "__table";
+    @import "__cards-wrapper";
+    @import "__candle";
+    @import "__sidebar";
+}

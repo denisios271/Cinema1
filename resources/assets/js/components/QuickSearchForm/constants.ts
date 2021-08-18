@@ -1,0 +1,1 @@
+export const RECEIVE_POSTS = 'QSF.RECEIVE_POSTS';
